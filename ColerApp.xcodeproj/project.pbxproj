@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		E52057732C3ABE9500F8939B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52057722C3ABE9500F8939B /* AppDelegate.swift */; };
-		E52057772C3ABE9500F8939B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52057762C3ABE9500F8939B /* ViewController.swift */; };
+		E52057772C3ABE9500F8939B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52057762C3ABE9500F8939B /* MainViewController.swift */; };
 		E520577C2C3ABE9600F8939B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E520577B2C3ABE9600F8939B /* Assets.xcassets */; };
 		E520577F2C3ABE9600F8939B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E520577E2C3ABE9600F8939B /* Base */; };
+		E5680DD52C3AE7FC0031A7CC /* FindButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5680DD42C3AE7FC0031A7CC /* FindButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E520576F2C3ABE9500F8939B /* ColerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E52057722C3ABE9500F8939B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E52057762C3ABE9500F8939B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E52057762C3ABE9500F8939B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E520577B2C3ABE9600F8939B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E520577E2C3ABE9600F8939B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E52057802C3ABE9600F8939B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5680DD42C3AE7FC0031A7CC /* FindButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +56,7 @@
 			children = (
 				E5680DD12C3AD1790031A7CC /* View */,
 				E5680DCE2C3AD0EC0031A7CC /* Application */,
-				E52057762C3ABE9500F8939B /* ViewController.swift */,
+				E52057762C3ABE9500F8939B /* MainViewController.swift */,
 			);
 			path = ColerApp;
 			sourceTree = "<group>";
@@ -73,6 +75,7 @@
 		E5680DD12C3AD1790031A7CC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E5680DD42C3AE7FC0031A7CC /* FindButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -147,7 +150,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E52057772C3ABE9500F8939B /* ViewController.swift in Sources */,
+				E5680DD52C3AE7FC0031A7CC /* FindButton.swift in Sources */,
+				E52057772C3ABE9500F8939B /* MainViewController.swift in Sources */,
 				E52057732C3ABE9500F8939B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

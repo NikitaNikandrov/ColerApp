@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     
     @objc private func heartButtonTapped() {
@@ -16,8 +16,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .green
+        self.view.backgroundColor = .systemBackground
         setupNavigationBar()
+        setupFindButton()
     }
     
     private func setupNavigationBar() {
@@ -51,6 +52,19 @@ class ViewController: UIViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    private func setupFindButton() {
+        let findButton = FindButton()
+        findButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(findButton)
+        
+        NSLayoutConstraint.activate([
+            findButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            findButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            findButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
+            findButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
     }
 }
 
