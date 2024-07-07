@@ -8,24 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		E52057732C3ABE9500F8939B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52057722C3ABE9500F8939B /* AppDelegate.swift */; };
-		E52057752C3ABE9500F8939B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52057742C3ABE9500F8939B /* SceneDelegate.swift */; };
 		E52057772C3ABE9500F8939B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52057762C3ABE9500F8939B /* ViewController.swift */; };
-		E520577A2C3ABE9500F8939B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E52057792C3ABE9500F8939B /* Base */; };
 		E520577C2C3ABE9600F8939B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E520577B2C3ABE9600F8939B /* Assets.xcassets */; };
 		E520577F2C3ABE9600F8939B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E520577E2C3ABE9600F8939B /* Base */; };
-		E5680DCD2C3AC3300031A7CC /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E5680DCC2C3AC3300031A7CC /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E520576F2C3ABE9500F8939B /* ColerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E52057722C3ABE9500F8939B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E52057742C3ABE9500F8939B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E52057762C3ABE9500F8939B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E52057792C3ABE9500F8939B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E520577B2C3ABE9600F8939B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E520577E2C3ABE9600F8939B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E52057802C3ABE9600F8939B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E5680DCC2C3AC3300031A7CC /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +36,6 @@
 		E52057662C3ABE9500F8939B = {
 			isa = PBXGroup;
 			children = (
-				E5680DCC2C3AC3300031A7CC /* .gitignore */,
 				E52057712C3ABE9500F8939B /* ColerApp */,
 				E52057702C3ABE9500F8939B /* Products */,
 			);
@@ -60,9 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				E52057722C3ABE9500F8939B /* AppDelegate.swift */,
-				E52057742C3ABE9500F8939B /* SceneDelegate.swift */,
 				E52057762C3ABE9500F8939B /* ViewController.swift */,
-				E52057782C3ABE9500F8939B /* Main.storyboard */,
 				E520577B2C3ABE9600F8939B /* Assets.xcassets */,
 				E520577D2C3ABE9600F8939B /* LaunchScreen.storyboard */,
 				E52057802C3ABE9600F8939B /* Info.plist */,
@@ -128,10 +119,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5680DCD2C3AC3300031A7CC /* .gitignore in Resources */,
 				E520577C2C3ABE9600F8939B /* Assets.xcassets in Resources */,
 				E520577F2C3ABE9600F8939B /* Base in Resources */,
-				E520577A2C3ABE9500F8939B /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,21 +133,12 @@
 			files = (
 				E52057772C3ABE9500F8939B /* ViewController.swift in Sources */,
 				E52057732C3ABE9500F8939B /* AppDelegate.swift in Sources */,
-				E52057752C3ABE9500F8939B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E52057782C3ABE9500F8939B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E52057792C3ABE9500F8939B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E520577D2C3ABE9600F8939B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -301,7 +281,6 @@
 				INFOPLIST_FILE = ColerApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -329,7 +308,6 @@
 				INFOPLIST_FILE = ColerApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
