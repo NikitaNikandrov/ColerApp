@@ -8,10 +8,14 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    
+    let findButton = FindButton()
     
     @objc private func heartButtonTapped() {
         print("Heart button tapped")
+    }
+    
+    @objc private func findButtonTapped() {
+        print("Find color button tapped")
     }
     
     override func viewDidLoad() {
@@ -19,6 +23,7 @@ class MainViewController: UIViewController {
         self.view.backgroundColor = .systemBackground
         setupNavigationBar()
         setupFindButton()
+        setupCameraView()
     }
     
     private func setupNavigationBar() {
@@ -55,8 +60,8 @@ class MainViewController: UIViewController {
     }
     
     private func setupFindButton() {
-        let findButton = FindButton()
         findButton.translatesAutoresizingMaskIntoConstraints = false
+        findButton.addTarget(self, action: #selector(findButtonTapped), for: .touchUpInside)
         view.addSubview(findButton)
         
         NSLayoutConstraint.activate([
@@ -64,6 +69,19 @@ class MainViewController: UIViewController {
             findButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             findButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
             findButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
+    
+    private func setupCameraView() {
+        let cameraView = CameraView()
+        cameraView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(cameraView)
+        
+        NSLayoutConstraint.activate([
+            cameraView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            cameraView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            cameraView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            cameraView.bottomAnchor.constraint(equalTo: findButton.topAnchor, constant: -10)
         ])
     }
 }

@@ -24,13 +24,8 @@ class FindButton: UIButton {
         self.backgroundColor = .lightGray
         self.setTitleColor(.white, for: .normal)
         self.layer.cornerRadius = 10
-        self.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         self.addTarget(self, action: #selector(touchDown), for: .touchDown)
         self.addTarget(self, action: #selector(touchUp), for: [.touchUpInside, .touchUpOutside, .touchCancel])
-    }
-    
-    @objc private func buttonTapped() {
-        print("Find color button tapped")
     }
     
     @objc private func touchDown() {
