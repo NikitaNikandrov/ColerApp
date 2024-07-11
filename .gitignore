@@ -102,5 +102,5 @@ Packages
 xcuserdata
 *.xcodeproj
 
-# RALColor.swift
-ColerApp/Entity/RALColor.swift
+# RALColors.swift
+ColerApp/Entity/RALColors.swift
