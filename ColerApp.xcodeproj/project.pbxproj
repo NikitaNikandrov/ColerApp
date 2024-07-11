@@ -13,6 +13,9 @@
 		E520577F2C3ABE9600F8939B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E520577E2C3ABE9600F8939B /* Base */; };
 		E5680DD52C3AE7FC0031A7CC /* FindButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5680DD42C3AE7FC0031A7CC /* FindButton.swift */; };
 		E5680DD72C3AEB1C0031A7CC /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5680DD62C3AEB1C0031A7CC /* CameraView.swift */; };
+		E5680DDA2C3B187B0031A7CC /* CameraViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5680DD92C3B187B0031A7CC /* CameraViewPresenter.swift */; };
+		E5680DDD2C3ED5AC0031A7CC /* RALColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5680DDC2C3ED5AC0031A7CC /* RALColor.swift */; };
+		E5680DE02C4009CC0031A7CC /* RALColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5680DDF2C4009CC0031A7CC /* RALColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		E52057802C3ABE9600F8939B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5680DD42C3AE7FC0031A7CC /* FindButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindButton.swift; sourceTree = "<group>"; };
 		E5680DD62C3AEB1C0031A7CC /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		E5680DD92C3B187B0031A7CC /* CameraViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewPresenter.swift; sourceTree = "<group>"; };
+		E5680DDC2C3ED5AC0031A7CC /* RALColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RALColor.swift; sourceTree = "<group>"; };
+		E5680DDF2C4009CC0031A7CC /* RALColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RALColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 		E52057712C3ABE9500F8939B /* ColerApp */ = {
 			isa = PBXGroup;
 			children = (
+				E5680DDE2C40099E0031A7CC /* Model */,
+				E5680DDB2C3ED58D0031A7CC /* Entity */,
+				E5680DD82C3B18640031A7CC /* Presenter */,
 				E5680DD12C3AD1790031A7CC /* View */,
 				E5680DCE2C3AD0EC0031A7CC /* Application */,
 				E52057762C3ABE9500F8939B /* MainViewController.swift */,
@@ -81,6 +90,30 @@
 				E5680DD62C3AEB1C0031A7CC /* CameraView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E5680DD82C3B18640031A7CC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E5680DD92C3B187B0031A7CC /* CameraViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E5680DDB2C3ED58D0031A7CC /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E5680DDC2C3ED5AC0031A7CC /* RALColor.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		E5680DDE2C40099E0031A7CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5680DDF2C4009CC0031A7CC /* RALColor.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +187,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5680DD52C3AE7FC0031A7CC /* FindButton.swift in Sources */,
+				E5680DE02C4009CC0031A7CC /* RALColor.swift in Sources */,
 				E52057772C3ABE9500F8939B /* MainViewController.swift in Sources */,
 				E52057732C3ABE9500F8939B /* AppDelegate.swift in Sources */,
 				E5680DD72C3AEB1C0031A7CC /* CameraView.swift in Sources */,
+				E5680DDA2C3B187B0031A7CC /* CameraViewPresenter.swift in Sources */,
+				E5680DDD2C3ED5AC0031A7CC /* RALColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,10 +8,17 @@
 import UIKit
 import AVFoundation
 
+protocol CameraViewProtocol: AnyObject {
+    func getCircleViewFrame() -> CGRect
+    func getCircleViewImage() -> UIImage?
+}
+
 class CameraView: UIView {
-    
+    var presenter: CameraViewPresenterProtocol?
     private var captureSession: AVCaptureSession?
     private var videoPreviewLayer: AVCaptureVideoPreviewLayer?
+    
+    private let circleDiameter: CGFloat = 50.0
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -79,7 +86,6 @@ class CameraView: UIView {
     }
     
     private func setupCircleOverlay() {
-        let circleDiameter: CGFloat = 50.0
         let circleView = UIView(frame: CGRect(x: 0, y: 0, width: circleDiameter, height: circleDiameter))
         circleView.center = self.center
         circleView.backgroundColor = .clear
@@ -95,5 +101,25 @@ class CameraView: UIView {
             circleView.widthAnchor.constraint(equalToConstant: circleDiameter),
             circleView.heightAnchor.constraint(equalToConstant: circleDiameter)
         ])
+    }
+}
+
+extension CameraView: CameraViewProtocol {
+    func getCircleViewFrame() -> CGRect {
+        guard let circleView = self.subviews.first(where: { $0.frame.size.width == circleDiameter && $0.frame.size.height == circleDiameter }) else {
+            return .zero
+        }
+        return circleView.frame
+    }
+    
+    func getCircleViewImage() -> UIImage? {
+        guard let circleView = self.subviews.first(where: { $0.frame.size.width == circleDiameter && $0.frame.size.height == circleDiameter }) else {
+            return nil
+        }
+        
+        let renderer = UIGraphicsImageRenderer(bounds: circleView.bounds)
+        return renderer.image { ctx in
+            circleView.layer.render(in: ctx.cgContext)
+        }
     }
 }

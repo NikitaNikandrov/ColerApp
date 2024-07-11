@@ -10,6 +10,9 @@ import UIKit
 class MainViewController: UIViewController {
     let findButton = FindButton()
     
+    var cameraView: CameraViewProtocol?
+    var cameraPresenter: CameraViewPresenterProtocol?
+    
     @objc private func heartButtonTapped() {
         print("Heart button tapped")
     }
@@ -73,16 +76,27 @@ class MainViewController: UIViewController {
     }
     
     private func setupCameraView() {
-        let cameraView = CameraView()
-        cameraView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(cameraView)
+        let cameraViewInstance = CameraView(frame: view.bounds)
+        
+        guard let cameraViewAsUIView = cameraViewInstance as? UIView else { return }
+        
+        let cameraPresenterInstance = CameraViewPresenter(view: cameraViewInstance)
+        
+        cameraViewInstance.presenter = cameraPresenterInstance
+        
+        cameraViewAsUIView.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(cameraViewAsUIView)
         
         NSLayoutConstraint.activate([
-            cameraView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            cameraView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            cameraView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
-            cameraView.bottomAnchor.constraint(equalTo: findButton.topAnchor, constant: -10)
+            cameraViewAsUIView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            cameraViewAsUIView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            cameraViewAsUIView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            cameraViewAsUIView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10)
         ])
+        
+        self.cameraView = cameraViewInstance
+        self.cameraPresenter = cameraPresenterInstance
     }
 }
 
